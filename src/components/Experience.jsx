@@ -21,7 +21,7 @@ import git from '../assets/git.png'
 import sh from '../assets/sidehustle.png'
 import firebase from '../assets/firebase.png'
 import jp from '../assets/jp.png'
-import plc from '../assets/logo.png'
+import plc from '../assets/logoss.png'
 
 
 function Experience() {
@@ -45,7 +45,7 @@ function Experience() {
     },
     {
       images: [react, css, firebase, bootstrap, git],
-      lists: ["Developed, tested and Deployed an insurance web application with Reactjs, Bootstrap, Firebase, Paystack API’s and so on.", " Worked directly with firebase authentication, cloudstore database and firebase storage among others to make the app ready for clients' usage", 'Integrated paystack payment into the app as a means of payment.', 'Developed And deployed our admin side of our insurance app.'],
+      lists: ["Developed, tested and Deployed an insurance web application with Reactjs, Bootstrap, Firebase, Paystack API’s and so on.", " Worked directly with firebase authentication, cloudstore database and firebase storage among others to make the app ready for clients' usage", 'Integrated paystack payment into the app as a means of payment.'],
       img: jp,
       title: 'Frontend Developer',
       company: 'Juniper Labs',
@@ -53,7 +53,7 @@ function Experience() {
     },
     {
       images: [react, css, tailwind, redux, sass, git],
-      lists: ["Developed the official website with modern JavaScript frameworks, React, TailwindCss, css animation which improved user satisfaction.", "Created the user experience that fetched, parsed, and formatted analytic data, and relayed it into React components.", 'Tutor students in front-end development concepts and technologies', 'Create and deliver lesson plans and curriculum', ' Provide one-on-one and group instruction and Monitored student progress and provide feedback'],
+      lists: ["Developed the official website with modern JavaScript frameworks, React, TailwindCss, css animation which improved user satisfaction.", 'Tutor students in front-end development concepts and technologies', 'Create and deliver lesson plans and curriculum', ' Provide one-on-one and group instruction and Monitored student progress and provide feedback'],
       img: plc,
       title: 'Frontend Developer',
       company: 'Platform Lead ICT',
