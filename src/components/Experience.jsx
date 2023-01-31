@@ -76,7 +76,7 @@ function Experience() {
               <h3 className='absolute top-20 font-semibold uppercase tracking-[10px] text-gray-500 text-xl'>Experience</h3>
 
 
-              <div className='text-left mt-5 w-full flex space-x-8 overflow-x-scroll snap-x snap-mandatory px-10  scrollbar-track-gray-400/40 scrollbar-thumb-[#f7ab0a]/70 scrollbar-thin'>
+              <div className='text-left mt-2 md:mt-5 w-full flex space-x-8 overflow-x-scroll snap-x snap-mandatory px-10  scrollbar-track-gray-400/40 scrollbar-thumb-[#f7ab0a]/70 scrollbar-thin'>
                   {/* experience cards */}
 
                   {experienceData.map((experience, i) => ( <ExperienceCard key={i} images={experience.images} lists={experience.lists} img={experience.img} title={experience.title} company={experience.company} timeRange={experience.timeRange}  />))}
