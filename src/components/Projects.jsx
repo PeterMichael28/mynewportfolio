@@ -87,7 +87,7 @@ const Projects = () => {
     id="projects"
     className="snap-center min-h-screen "
    >
-    <div className="flex flex-col relative h-screen text-left xl:flex-row max-w-full justify-center mx-auto items-center z-0 overflow-x-hidden">
+    <div className="flex flex-col relative text-left xl:flex-row max-w-full justify-center mx-auto items-center z-0 overflow-x-hidden">
      <h3 className="absolute top-16 font-semibold uppercase tracking-[10px] text-gray-500 text-xl">
       Projects
      </h3>
