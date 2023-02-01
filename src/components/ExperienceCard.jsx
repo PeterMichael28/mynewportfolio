@@ -15,7 +15,7 @@ const ExperienceCard = ({images, lists, img, title, company, timeRange}) => {
                   viewport={{once: true}}
           >
               
-          <img src={img1}alt='experience logo' className='w-[6rem]  rounded-full object-center' />
+          <img src={img}alt='experience logo' className='w-[6rem]  rounded-full object-center' />
         </motion.div>
 
         <div className='px-0 md:px-10'>

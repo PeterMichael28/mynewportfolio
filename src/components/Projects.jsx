@@ -92,7 +92,7 @@ const Projects = () => {
       Projects
      </h3>
     
-    <div className='relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 mt-2 md:mt-5  scrollbar-track-gray-400/40 scrollbar-thumb-[#f7ab0a]/70 scrollbar-thin mb-8'>
+    <div className='relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 -mt-4 md:mt-5  scrollbar-track-gray-400/40 scrollbar-thumb-[#f7ab0a]/70 scrollbar-thin mb-11'>
         {
             projects.map((project, i) => (
                 <div key={i} className='w-screen flex-shrink-0 snap-center flex flex-col space-y-1 items-center justify-center h-screen px-4 xs:px-7 py-16 md:p-20 md:px-44 md:py-12'>
@@ -115,7 +115,7 @@ const Projects = () => {
                         className='space-y-3 px-0 md:px-10 max-w-4xl'>
                         <h4 className='text-xl font-semibold text-center'><span className='underline decoration-[#f7ab0a]/50 text-[#f7ab0a]/50'>Case Study {i + 1} of {projects.length}:</span>  {project.title}</h4>
 
-                        <p className="text-sm text-center md:text-left md:text-base">
+                        <p className="text-[.8rem] sm:text-sm text-center md:text-left md:text-base">
                             {project.desc}
                         </p>
                         <div className='flex justify-center items-center space-x-6'>

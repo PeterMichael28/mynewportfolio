@@ -11,7 +11,7 @@ const Skill = ({ img, text}) => {
     <div
     
      className='rounded-full '>
-        <img src={img} alt='logo' className='rounded-full border border-gray-500  object-cover h-[70px] w-[70px] xl:w-[85px] xl:h-[85px] filter group-hover:grayscale transition duration-500 ease-in-out' />
+        <img src={img} alt='logo' className='rounded-full border border-gray-500  object-cover h-[60px] w-[60px] xl:w-[85px] xl:h-[85px] filter group-hover:grayscale transition duration-500 ease-in-out' />
     </div>
             
 
