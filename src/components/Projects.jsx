@@ -85,14 +85,14 @@ const Projects = () => {
     whileInView={{ opacity: 1 }}
     transition={{ duration: 1.5 }}
     id="projects"
-    className="snap-center min-h-screen "
+    className="snap-end h-screen"
    >
     <div className="flex flex-col relative text-left xl:flex-row max-w-full justify-center mx-auto items-center z-0 overflow-x-hidden">
      <h3 className="absolute top-16 font-semibold uppercase tracking-[10px] text-gray-500 text-xl">
       Projects
      </h3>
     
-    <div className='relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 -mt-4 md:mt-5  scrollbar-track-gray-400/40 scrollbar-thumb-[#f7ab0a]/70 scrollbar-thin mb-11'>
+    <div className='relative w-full flex h-fit overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 -mt-10 md:-mt-3  scrollbar-track-gray-400/40 scrollbar-thumb-[#f7ab0a]/70 scrollbar-thin mb-[4rem]'>
         {
             projects.map((project, i) => (
                 <div key={i} className='w-screen flex-shrink-0 snap-center flex flex-col space-y-1 items-center justify-center h-screen px-4 xs:px-7 py-16 md:p-20 md:px-44 md:py-12'>

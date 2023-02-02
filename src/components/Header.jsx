@@ -26,7 +26,7 @@ function Header() {
         scale: 1
     }}
     
-    transition={{duration:1.5}}
+    transition={{duration:1}}
     >
 
 
@@ -81,7 +81,7 @@ function Header() {
             scale: 1
         }}
         
-        transition={{duration:1.5}}
+        transition={{duration:1}}
    >
    
  
