@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import React from 'react'
+import React, {useRef, useState} from 'react'
 
 import img1 from '../assets//hero.png'
 import gym from '../assets//log.png'
@@ -11,6 +11,8 @@ import spaceApp from '../assets//SpaceApp.png'
 import netflix from '../assets//netflix.png'
 import recipe from '../assets//Recipe.png'
 import { Link } from 'react-router-dom';
+import { BsChevronRight } from "react-icons/bs";
+import { BsChevronLeft } from "react-icons/bs";
 
 
 
@@ -78,7 +80,23 @@ const Projects = () => {
 
     ]
 
-  
+    const rowRef = useRef( null )
+    const [isMoved, setIsMoved] = useState(false)
+
+    const handleClick = (direction) => {
+        setIsMoved(true)
+        if (rowRef.current) {
+          const { scrollLeft, clientWidth } = rowRef.current
+    
+          const scrollTo =
+            direction === 'left'
+              ? scrollLeft - clientWidth
+              : scrollLeft + clientWidth
+          rowRef.current.scrollTo({ left: scrollTo, behavior: 'smooth' })
+         
+        }
+        
+      }
 
   return (
     <motion.section initial={{ opacity: 0 }}
@@ -92,7 +110,15 @@ const Projects = () => {
       Projects
      </h3>
     
-    <div className='relative w-full flex h-fit overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 mt-10 md:mt-16  scrollbar-track-gray-400/40 scrollbar-thumb-[#f7ab0a]/70 scrollbar-thin'>
+    <div className='group relative w-full flex h-fit overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-track-gray-400/40 scrollbar-thumb-[#f7ab0a]/70 scrollbar-thin'>
+    <BsChevronLeft
+        className={`absolute top-0 bottom-0 left-2 z-40 m-auto h-9 w-9 cursor-pointer opacity-50 transition hover:scale-125 group-hover:opacity-100 text-[#f7ab0a]  ${
+         !isMoved && "hidden"
+        }`}
+        onClick={() => handleClick("left")}
+       />
+    <div className='relative w-full flex h-fit overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 mt-10 md:mt-16  scrollbar-track-gray-400/40 scrollbar-thumb-[#f7ab0a]/70 scrollbar-thin' ref={rowRef}>
+    
         {
             projects.map((project, i) => (
                 <div key={i} className='w-screen flex-shrink-0 snap-center flex flex-col space-y-1 items-center justify-center px-4 xs:px-7 py-16 md:p-20 md:px-44 md:py-12'>
@@ -130,11 +156,19 @@ const Projects = () => {
                 </div>
             ))
         }
+
+   
+    </div>
+    <BsChevronRight
+        className="absolute top-0 bottom-0 right-2 z-40 m-auto h-9 w-9 cursor-pointer opacity-50 transition hover:scale-125 group-hover:opacity-100 text-[#f7ab0a] "
+        onClick={() => handleClick("right")}
+       />
     </div>
     <div className='w-full absolute top-[30%] bg-[#f7ab0a]/10 left-0 h-[200px] -skew-y-12'></div>
     </div>
     </motion.section>
   )
 }
+
 
 export default Projects

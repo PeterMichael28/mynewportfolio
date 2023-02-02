@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import React from 'react'
+import React, {useRef, useState} from 'react'
 import ExperienceCard from './ExperienceCard';
 import html from '../assets/html.png'
 import css from '../assets/css.png'
@@ -22,6 +22,8 @@ import sh from '../assets/sidehustle.png'
 import firebase from '../assets/firebase.png'
 import jp from '../assets/jp.png'
 import plc from '../assets/logoss.png'
+import { BsChevronRight } from "react-icons/bs";
+import { BsChevronLeft } from "react-icons/bs";
 
 
 function Experience() {
@@ -61,6 +63,24 @@ function Experience() {
     }
   ]
   
+
+  const rowRef = useRef( null )
+  const [isMoved, setIsMoved] = useState(false)
+
+  const handleClick = (direction) => {
+      setIsMoved(true)
+      if (rowRef.current) {
+        const { scrollLeft, clientWidth } = rowRef.current
+  
+        const scrollTo =
+          direction === 'left'
+            ? scrollLeft - clientWidth
+            : scrollLeft + clientWidth
+        rowRef.current.scrollTo({ left: scrollTo, behavior: 'smooth' })
+       
+      }
+      
+    }
  
  
  
@@ -75,8 +95,14 @@ function Experience() {
             <div className='flex flex-col relative h-screen text-center md:text-left md:flex-row max-w-full px-3 md:px-10 justify-evenly mx-auto items-center'>
               <h3 className='absolute top-20 font-semibold uppercase tracking-[10px] text-gray-500 text-xl'>Experience</h3>
 
-
-              <div className='text-left mt-2 md:mt-5 w-full flex space-x-8 overflow-x-scroll snap-x snap-mandatory px-10  scrollbar-track-gray-400/40 scrollbar-thumb-[#f7ab0a]/70 scrollbar-thin'>
+            <div className='relative group w-full flex overflow-x-scroll snap-x snap-mandatory scrollbar-track-gray-400/40 scrollbar-thumb-[#f7ab0a]/70 scrollbar-thin'>
+            <BsChevronLeft
+        className={`absolute text-[#f7ab0a] top-0 bottom-0 -left-2 z-40 m-auto h-9 w-9 cursor-pointer opacity-50 transition hover:scale-125 group-hover:opacity-100 ${
+         !isMoved && "hidden"
+        }`}
+        onClick={() => handleClick("left")}
+       />
+              <div className='text-left mt-2 md:mt-5 w-full flex space-x-8 overflow-x-scroll snap-x snap-mandatory px-10  scrollbar-track-gray-400/40 scrollbar-thumb-[#f7ab0a]/70 scrollbar-thin' ref={rowRef}>
                   {/* experience cards */}
 
                   {experienceData.map((experience, i) => ( <ExperienceCard key={i} images={experience.images} lists={experience.lists} img={experience.img} title={experience.title} company={experience.company} timeRange={experience.timeRange}  />))}
@@ -85,6 +111,12 @@ function Experience() {
                   <ExperienceCard />
                   <ExperienceCard /> */}
               </div>
+              <BsChevronRight
+        className="absolute top-0 bottom-0 right-2 z-40 m-auto h-9 w-9 cursor-pointer opacity-50 transition hover:scale-125 group-hover:opacity-100 text-[#f7ab0a] "
+        onClick={() => handleClick("right")}
+       />
+              
+            </div>
               </div>
     </motion.section>
   )

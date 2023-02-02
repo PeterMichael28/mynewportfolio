@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 
 const ExperienceCard = ({images, lists, img, title, company, timeRange}) => {
   return (
-    <article className='flex flex-col rounded-l items-center space-y-3 flex-shrink-0 w-[360px] md:w-[450px] snap-center bg-[#292929] px-6 md:px-2 py-4 md:py-2 md:pt-4 mt-16 md:mt-24 mb-3 opacity-70 hover:opacity-100 transition-opacity duration-500 cursor-pointer overflow-hidden rounded-md'>
+    <article className='flex flex-col rounded-l items-center space-y-3 flex-shrink-0 w-[360px] md:w-[450px] snap-start bg-[#292929] px-6 md:px-2 py-4 md:py-2 md:pt-4 mt-16 md:mt-24 mb-3 opacity-70 hover:opacity-100 transition-opacity duration-500 cursor-pointer overflow-hidden rounded-md'>
           <motion.div
                   initial={ {opacity: 0, y:-100} }
                   whileInView={ { opacity: 1, y:0 } }

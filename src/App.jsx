@@ -8,6 +8,8 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
+import {AiOutlineCopyright } from "react-icons/ai";
+
 
 function App() {
  
@@ -31,6 +33,11 @@ function App() {
       {/* Contact Me */}
       <Contact />
     </main>
+
+      <footer className='snap-start flex items-center justify-center space-x-2 py-3'>
+        <AiOutlineCopyright />
+        <p className='text-sm'>2023 Peter Michael</p>
+      </footer>
   </div>
   )
 }
