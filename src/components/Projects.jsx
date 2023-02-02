@@ -121,7 +121,7 @@ const Projects = () => {
     
         {
             projects.map((project, i) => (
-                <div key={i} className='w-screen flex-shrink-0 snap-center flex flex-col space-y-1 items-center justify-center px-4 xs:px-7 py-16 md:p-20 md:px-44 md:py-12'>
+                <div key={i} className='w-screen flex-shrink-0 snap-center flex flex-col space-y-3 items-center justify-center px-4 xs:px-7 py-16 md:p-20 md:px-44 md:py-12'>
 
                     <motion.div
                     initial={{ opacity: 0, y:-100 }}
