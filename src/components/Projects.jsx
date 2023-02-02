@@ -103,7 +103,7 @@ const Projects = () => {
     whileInView={{ opacity: 1 }}
     transition={{ duration: 1.5 }}
     id="projects"
-    className="snap-end h-screen"
+    className="snap-center h-screen"
    >
     <div className="flex flex-col relative text-left xl:flex-row max-w-full justify-center mx-auto items-center z-0 overflow-x-hidden">
      <h3 className="absolute top-16 font-semibold uppercase tracking-[10px] text-gray-500 text-xl">
