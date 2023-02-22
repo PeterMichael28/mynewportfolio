@@ -15,6 +15,7 @@ import { BsChevronRight } from "react-icons/bs";
 import { BsChevronLeft } from "react-icons/bs";
 
 
+//
 
 const Projects = () => {
 
@@ -34,6 +35,13 @@ const Projects = () => {
             live: 'https://inventory-frontend-xi.vercel.app/',
             source: '#',
 
+        },
+        {
+            img: eco,
+            title: 'NextJs E-commerce WebApp',
+            desc: "Developed a NextJs E-commerce web app using NextJs, Typescript, TailwindCss, Redux and Redux toolkit for the state management, and integrated stripeJs as a payment platform. All products were fetched from Sanity CMS, that serves as a backend for the project it allows user to add to cart, checkout and use the stripeJs test-mode payment option. Its been deployed on Vercel",
+            live: 'mike-shop.vercel.app',
+            source: 'mike-shop.vercel.app'
         },
         {
             img: plc,
@@ -56,13 +64,7 @@ const Projects = () => {
             live: 'https://netflix-clone28.vercel.app',
             source: 'https://github.com/PeterMichael28/Netflix'
         },
-        {
-            img: eco,
-            title: 'React E-commerce WebApp',
-            desc: "An E-commerce web app created with ReactJs, Bootstrap, Redux-toolKit and Redux for the state Management. A Multi-page e-commerce website that allows you to check through different products and their details. There is also a add to cart functionality that lets you add any item of your choice to your cart",
-            live: 'https://petermichael28.github.io/React-E-commerce/',
-            source: 'https://petermichael28.github.io/React-E-commerce/'
-        },
+      
         {
             img: recipe,
             title: 'A Food Recipe App',
