@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import React from 'react'
 
 import img1 from '../assets/hero.png'
-import pdf from '../../src/PeterMichaelResume01.pdf'
+import pdf from '../src/mycv.pdf'
 
 
 
