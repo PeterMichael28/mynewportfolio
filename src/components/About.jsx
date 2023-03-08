@@ -37,7 +37,7 @@ const About = () => {
           <p className='text-justify sm:text-left text-[.8rem] sm:text-sm mb-8'>I am a highly skilled frontend developer with over 2 years of experience in developing dynamic and responsive web applications. I am proficient in a variety of frontend technologies, including HTML, CSS, JavaScript, React, Next.js, Node.js, Express.js, MongoDB, TypeScript and other frontend tools. My strong understanding of user experience and design principles, along with my ability to work collaboratively with cross-functional teams, allows me to deliver high-quality, visually appealing, and user-friendly web applications. I am dedicated to staying up-to-date with the latest technologies and trends in the industry, and I am always eager to take on new challenges and learn new skills. I am confident in my ability to make a positive impact on any project and team I am a part of.</p>
           <div className='mt-10'>
 
-          <a className="border border-[#F7ab0a] hover:bg-transparent py-3 text-[1rem] font-semibold px-6 hover:text-[#F7ab0a] rounded-lg bg-[#F7ab0a] text-white transition duration-[.2s] " onClick={handleClick} rel="noopener noreferrer" download>
+          <a className="border border-[#F7ab0a] hover:bg-transparent py-3 text-[1rem] font-semibold px-6 hover:text-[#F7ab0a] rounded-lg bg-[#F7ab0a] text-white transition duration-[.2s] " onClick={handleClick} download rel="noopener noreferrer">
        Download CV
       </a>
           </div>
